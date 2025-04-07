@@ -1,0 +1,59 @@
+/* src/components/MainApp.css */
+.app-container {
+    color: white;
+    min-height: 100vh;
+    padding: 24px;
+    position: relative;
+  }
+  
+  .app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+  }
+  
+  .header-text h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  
+  .header-text p {
+    font-size: 18px;
+    opacity: 0.8;
+  }
+  
+  .logout-button {
+    padding: 8px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    color: white;
+    background: linear-gradient(to right, #ef4444, #ec4899);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(239, 68, 68, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .logout-button:hover {
+    background: linear-gradient(to right, #dc2626, #db2777);
+    box-shadow: 0 6px 8px rgba(239, 68, 68, 0.2);
+    transform: scale(1.05);
+  }
+  
+  .logout-button:active {
+    transform: scale(0.98);
+  }
+  
+  .app-main {
+    max-width: 672px;
+    margin: 0 auto;
+  }
+  
+  .app-footer {
+    margin-top: 48px;
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.7;
+  }

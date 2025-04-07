@@ -1,0 +1,50 @@
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-bottom: 1px solid #eaeaea;
+}
+
+header h1 {
+  color: #4a6fa5;
+  margin-bottom: 0.5rem;
+}
+
+main {
+  flex: 1;
+ 
+}
+
+footer {
+  margin-top: 2rem;
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #888;
+  border-top: 1px solid #eaeaea;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .app-container {
+    padding: 0.5rem;
+  }
+  
+  header {
+    margin-bottom: 1rem;
+  }
+  
+  header h1 {
+    font-size: 1.5rem;
+  }
+}

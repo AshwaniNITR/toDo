@@ -1,0 +1,164 @@
+/* WeatherInfo.css */
+.weather-info {
+  background: rgba(10, 25, 47, 0.5);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1rem;
+  border: 1px solid rgba(100, 255, 218, 0.2);
+  transition: all 0.3s ease;
+}
+
+.weather-info:hover {
+  border-color: rgba(100, 255, 218, 0.4);
+  box-shadow: 0 0 15px rgba(100, 255, 218, 0.1);
+}
+
+.weather-info h4 {
+  color: #64ffda;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.weather-info h4::before {
+  content: '🌤️';
+  font-size: 1.1rem;
+}
+
+.weather-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.weather-main {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.weather-icon {
+  width: 60px;
+  height: 60px;
+  filter: drop-shadow(0 0 5px rgba(100, 255, 218, 0.3));
+}
+
+.weather-temp {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.weather-temp .temp {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #e6f1ff;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.weather-temp .temp::after {
+  content: '°C';
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.weather-temp .description {
+  text-transform: capitalize;
+  color: #a8b2d1;
+  font-size: 0.9rem;
+}
+
+.weather-details {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.weather-detail {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.detail-label {
+  color: #64ffda;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.detail-value {
+  color: #e6f1ff;
+  font-weight: 500;
+}
+
+/* Specific emoji for different weather details */
+.weather-detail:nth-child(1) .detail-label::before {
+  content: '💧'; /* Humidity */
+}
+
+.weather-detail:nth-child(2) .detail-label::before {
+  content: '🌬️'; /* Wind */
+}
+
+/* Weather error state */
+.weather-error {
+  background: rgba(255, 107, 107, 0.1);
+  color: #ff6b6b;
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  margin-top: 1rem;
+  border: 1px solid rgba(255, 107, 107, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.weather-error::before {
+  content: '⚠️';
+}
+
+/* Weather loading state */
+.weather-loading {
+  color: #a8b2d1;
+  font-style: italic;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.weather-loading::before {
+  content: '⏳';
+}
+
+/* Dynamic weather backgrounds based on conditions */
+.weather-info[data-weather*="cloud"] {
+  background: rgba(15, 30, 60, 0.5);
+}
+
+.weather-info[data-weather*="rain"],
+.weather-info[data-weather*="drizzle"] {
+  background: rgba(10, 30, 70, 0.5);
+}
+
+.weather-info[data-weather*="clear"] {
+  background: rgba(20, 40, 80, 0.5);
+}
+
+.weather-info[data-weather*="snow"] {
+  background: rgba(25, 50, 90, 0.5);
+}
+
+.weather-info[data-weather*="thunder"] {
+  background: rgba(30, 20, 60, 0.5);
+}
